@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://linked.art/api/1.0/schema/core.json",
+    "$id": "core.json",
     "title": "Core Schema Definitions",
     "description": "Core definitions that are used to compose the Linked Art JSON-LD API",
     "type": "object",
@@ -62,9 +62,9 @@
             }
         },
         "aboutProp": {
-            "title": "crm:P129_is_about", 
-            "description": "The main topic(s) of the content", 
-            "type": "array", 
+            "title": "crm:P129_is_about",
+            "description": "The main topic(s) of the content",
+            "type": "array",
             "items": {
                 "$ref": "core.json#/definitions/AnyRef"
             }
@@ -281,29 +281,37 @@
                 "$ref": "#/definitions/LinguisticObjectRef"
             }
         },
-		"subject_ofProp": {
+        "subject_ofProp": {
             "title": "crm:P129i_is_subject_of",
             "description": "One or more human-readable web pages or other digital objects where the focus of the content is this entity",
-			"type": "array", 
-			"items": {"$ref": "#/definitions/LinguisticObjectEmbed"}
-		},
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/LinguisticObjectEmbed"
+            }
+        },
         "subject_toProp": {
             "title": "crm:P104i_is_subject_to",
             "description": "One or more Rights that this object is subject to",
-            "type": "array", 
-            "items": {"$ref": "#/definitions/Right"}
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Right"
+            }
         },
         "attributed_byProp": {
             "title": "crm:P140i_was_attributed_by",
             "description": "One or more AttributeAssignments that relate some other entity to this one",
-            "type": "array", 
-            "items": {"$ref": "#/definitions/AttributeAssignment"}
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/AttributeAssignment"
+            }
         },
         "attributed_byRelProp": {
             "title": "crm:P140i_was_attributed_by",
             "description": "One or more AttributeAssignments that relate some other entity to this one",
-            "type": "array", 
-            "items": {"$ref": "#/definitions/AttributeAssignment"}
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/AttributeAssignment"
+            }
         },
         "formatProp": {
             "title": "dc:format",
@@ -318,33 +326,42 @@
             "title": "dcterms:conformsTo",
             "description": "A standard or specification that this entity conforms to or embodies",
             "type": "array",
-            "items": {"$ref": "#/definitions/InfoObjectRef"}
+            "items": {
+                "$ref": "#/definitions/InfoObjectRef"
+            }
         },
         "access_pointProp": {
             "title": "la:access_point",
             "description": "A URL from which the digital object is able to be retrieved",
             "type": "array",
-            "items": {"$ref": "#/definitions/DigitalObjectRef"}
+            "items": {
+                "$ref": "#/definitions/DigitalObjectRef"
+            }
         },
         "digitally_shown_byProp": {
             "title": "la:digitally_shown_by",
             "description": "A digital object that shows the current visual item",
             "type": "array",
-            "items": {"$ref": "#/definitions/DigitalObjectEmbed"}
+            "items": {
+                "$ref": "#/definitions/DigitalObjectEmbed"
+            }
         },
         "digitally_carried_byProp": {
             "title": "la:digitally_carried_by",
             "description": "A digital object that carries the current linguistic object",
             "type": "array",
-            "items": {"$ref": "#/definitions/DigitalObjectEmbed"}
+            "items": {
+                "$ref": "#/definitions/DigitalObjectEmbed"
+            }
         },
         "digitally_available_viaProp": {
             "title": "la:digitally_available_via",
             "description": "A digital service that may be interacted with in order to retrieve or act upon the digital object",
             "type": "array",
-            "items": {"$ref": "#/definitions/DigitalService"}
+            "items": {
+                "$ref": "#/definitions/DigitalService"
+            }
         },
-
         "Name": {
             "title": "crm:E33_E41_Linguistic_Appellation",
             "description": "A name of an entity\nSee: [API](https://linked.art/api/1.0/shared/name/) | [Model](https://linked.art/model/base/#names)",
@@ -379,7 +396,7 @@
                     "$ref": "#/definitions/languageProp"
                 },
                 "referred_to_by": {
-                    "$ref": "/definitions/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "part": {
                     "description": "A list of one or more `Name` structures, which are parts of this `Name`",
@@ -713,7 +730,8 @@
                     "$ref": "#/definitions/referred_to_byProp"
                 },
                 "created_by": {
-                    "title": "crm:P94i_was_created_by", "$ref": "#/definitions/Creation"
+                    "title": "crm:P94i_was_created_by",
+                    "$ref": "#/definitions/Creation"
                 },
                 "possessed_by": {
                     "type": "array",
@@ -732,20 +750,57 @@
             "description": "The creation of the intellectual/conceptual entity",
             "type": "object",
             "properties": {
-                "type": {"allOf": [{"title": "General", "$ref": "core.json#/definitions/typeProp"}, 
-                    {"title": "Specific", "type": "string", "const": "Creation"}]},
-                "_label": {"$ref": "core.json#/definitions/labelProp"},
-                "identified_by": {"$ref": "core.json#/definitions/identified_byProp"},
-                "classified_as": {"$ref": "core.json#/definitions/classified_asProp"},
-                "referred_to_by": {"$ref": "core.json#/definitions/referred_to_byProp"},
-                "took_place_at": {"$ref": "core.json#/definitions/took_place_atProp"},
-                "timespan": {"$ref": "core.json#/definitions/timespanProp"},
-                "caused_by": {"$ref": "core.json#/definitions/caused_byProp"},
-                "carried_out_by": {"$ref": "core.json#/definitions/carried_out_byProp"},
-                "used_specific_object": {"$ref": "core.json#/definitions/used_specific_objectProp"},
-                "influenced_by": {"$ref": "core.json#/definitions/influenced_byProp"},
-                "technique": {"$ref": "core.json#/definitions/techniqueProp"},
-                "part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this creation is part of", "$ref": "core.json#/definitions/EventRefOrActivityRef"}
+                "type": {
+                    "allOf": [
+                        {
+                            "title": "General",
+                            "$ref": "core.json#/definitions/typeProp"
+                        },
+                        {
+                            "title": "Specific",
+                            "type": "string",
+                            "const": "Creation"
+                        }
+                    ]
+                },
+                "_label": {
+                    "$ref": "core.json#/definitions/labelProp"
+                },
+                "identified_by": {
+                    "$ref": "core.json#/definitions/identified_byProp"
+                },
+                "classified_as": {
+                    "$ref": "core.json#/definitions/classified_asProp"
+                },
+                "referred_to_by": {
+                    "$ref": "core.json#/definitions/referred_to_byProp"
+                },
+                "took_place_at": {
+                    "$ref": "core.json#/definitions/took_place_atProp"
+                },
+                "timespan": {
+                    "$ref": "core.json#/definitions/timespanProp"
+                },
+                "caused_by": {
+                    "$ref": "core.json#/definitions/caused_byProp"
+                },
+                "carried_out_by": {
+                    "$ref": "core.json#/definitions/carried_out_byProp"
+                },
+                "used_specific_object": {
+                    "$ref": "core.json#/definitions/used_specific_objectProp"
+                },
+                "influenced_by": {
+                    "$ref": "core.json#/definitions/influenced_byProp"
+                },
+                "technique": {
+                    "$ref": "core.json#/definitions/techniqueProp"
+                },
+                "part_of": {
+                    "title": "crm:P9i_forms_part_of",
+                    "description": "An identified event or activity which this creation is part of",
+                    "$ref": "core.json#/definitions/EventRefOrActivityRef"
+                }
             }
         },
         "Concept": {
@@ -907,7 +962,6 @@
                     "title": "crm:P177_assigned_property_type",
                     "description": "The relationship from the attributed entity to the assigned entity, given as a string which resolves to a relationship in the context definition",
                     "type": "string"
-
                 }
             },
             "required": [
@@ -955,7 +1009,9 @@
                     "title": "*",
                     "description": "Attribute Assignments can assign any entity or structure",
                     "type": "array",
-                    "items": { "$ref": "#/definitions/AnyRef"}
+                    "items": {
+                        "$ref": "#/definitions/AnyRef"
+                    }
                 },
                 "assigned_property": {
                     "title": "crm:P177_assigned_property_type",
@@ -969,7 +1025,6 @@
             ],
             "additionalProperties": false
         },
-
         "DigitalService": {
             "title": "la:DigitalService",
             "type": "object",
@@ -1003,11 +1058,10 @@
                     "$ref": "#/definitions/access_pointProp"
                 },
                 "conforms_to": {
-                    "$ref": "#/definitions/conforms_toProp"                    
+                    "$ref": "#/definitions/conforms_toProp"
                 }
             }
         },
-
         "DigitalObjectEmbed": {
             "title": "dig:D1_Digital_Object",
             "description": "An embedded Digital Object, such as a home page reference",
@@ -1045,11 +1099,10 @@
                     "$ref": "#/definitions/formatProp"
                 },
                 "conforms_to": {
-                    "$ref": "#/definitions/conforms_toProp"                    
-                }                                
+                    "$ref": "#/definitions/conforms_toProp"
+                }
             }
         },
-
         "VisualItemEmbed": {
             "title": "crm:E36_Visual_Item",
             "description": "An embedded Visual Item, such as the content of a digital image",
@@ -1087,9 +1140,8 @@
             "required": [
                 "type"
             ],
-            "additionalProperties": false  
+            "additionalProperties": false
         },
-
         "LinguisticObjectEmbed": {
             "title": "crm:E33_Linguistic_Object",
             "description": "An embedded Linguistic Object, such as the content of a web page",
@@ -1130,9 +1182,8 @@
             "required": [
                 "type"
             ],
-            "additionalProperties": false            
+            "additionalProperties": false
         },
-
         "HumanMadeObjectPart": {
             "title": "crm:E22_Human-Made_Object",
             "type": "object",
@@ -1847,7 +1898,13 @@
                         },
                         {
                             "type": "string",
-                            "enum": ["Type", "Language", "Material", "Currency", "MeasurementUnit"]
+                            "enum": [
+                                "Type",
+                                "Language",
+                                "Material",
+                                "Currency",
+                                "MeasurementUnit"
+                            ]
                         }
                     ]
                 },
@@ -1859,7 +1916,7 @@
                 "id",
                 "type"
             ],
-            "additionalProperties": false            
+            "additionalProperties": false
         }
-    }        
+    }
 }

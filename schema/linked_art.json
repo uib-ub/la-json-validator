@@ -1,42 +1,42 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://linked.art/api/1.0/schema/linked-art.json",
+    "$id": "linked-art.json",
     "title": "Linked Art Schema",
     "description": "All Linked Art Records",
     "type": "object",
     "anyOf": [
         {
-            "$ref": "https://linked.art/api/1.0/schema/concept.json"
+            "$ref": "concept.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/digital.json"
+            "$ref": "digital.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/event.json"
+            "$ref": "event.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/group.json"
+            "$ref": "group.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/image.json"
+            "$ref": "image.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/object.json"
+            "$ref": "object.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/person.json"
+            "$ref": "person.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/place.json"
+            "$ref": "place.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/provenance.json"
+            "$ref": "provenance.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/set.json"
+            "$ref": "set.json"
         },
         {
-            "$ref": "https://linked.art/api/1.0/schema/text.json"
-        }      
-    ]        
+            "$ref": "text.json"
+        }
+    ]
 }
