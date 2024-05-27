@@ -122,14 +122,6 @@
 				"$ref": "#/definitions/Encounter"
 			}
 		},
-		"used_for": {
-			"title": "crm:P16i_was_used_for",
-			"description": "One or more other activities without their own identities in which this object was used",
-			"type": "array",
-			"items": {
-				"$ref": "core.json#/definitions/Activity"
-			}
-		}
 	},
 	"definitions": {
 		"Production": {
