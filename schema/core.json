@@ -1414,7 +1414,8 @@
                                 "Language",
                                 "Material",
                                 "Currency",
-                                "MeasurementUnit"
+                                "MeasurementUnit",
+                                "PropositionalObject"
                             ]
                         }
                     ]
