@@ -20,6 +20,10 @@
 		"subject_of": {"$ref": "core.json#/$defs/subject_ofProp"},
 		"attributed_by": {"$ref": "core.json#/$defs/attributed_byRelProp"},
 
+		"during": {"$ref": "core.json#/$defs/duringProp"},
+		"after": {"$ref": "core.json#/$defs/afterProp"},
+		"before": {"$ref": "core.json#/$defs/beforeProp"},
+
 		"took_place_at": {"$ref": "core.json#/$defs/took_place_atProp"},
 		"timespan": {"$ref": "core.json#/$defs/timespanProp"},
 		"caused_by": {"$ref": "core.json#/$defs/caused_byProp"},
@@ -63,6 +67,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"transferred_title_from": {"title": "crm:P23_transferred_title_from", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
 				"transferred_title_to": {"title": "crm:P22_transferred_title_to", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
@@ -89,6 +96,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"transferred_custody_from": {"title": "crm:P28_custody_surrendered_by", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
 				"transferred_custody_to": {"title": "crm:P29_custody_received_by", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
@@ -115,6 +125,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"paid_from": {"title": "la:paid_from", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
 				"paid_to": {"title": "la:paid_to", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/PersonRefOrGroupRef"}},
@@ -141,6 +154,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"establishes": {"title": "la:establishes", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/LegalRight"}},
 				"invalidates": {"title": "la:invalidates", "description": "", "type": "array", "items": {"$ref": "core.json#/$defs/LegalRight"}}
@@ -166,6 +182,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"moved_from": {"title": "crm:P27_moved_from", "description": "Reference to the Place where the objects were moved from", "$ref": "core.json#/$defs/PlaceRef"},
 				"moved_to": {"title": "crm:P26_moved_to", "description": "Reference to the Place where the objects were moved to", "$ref": "core.json#/$defs/PlaceRef"},
@@ -192,6 +211,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"encountered": {"title": "sci:O19_has_found_object", "description": "The objects that were encountered during this event", "type": "array", "items": {"$ref": "core.json#/$defs/HumanMadeObjectRef"}}
 			},
@@ -215,7 +237,10 @@
 				"carried_out_by": {"$ref": "core.json#/$defs/carried_out_byProp"},
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
-				"technique": {"$ref": "core.json#/$defs/techniqueProp"}
+				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"}
 			},
 			"required": ["type", "classified_as"],
 			"additionalProperties": false	

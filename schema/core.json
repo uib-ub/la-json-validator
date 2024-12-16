@@ -376,7 +376,31 @@
             "type": "array",
             "items": {"$ref": "#/$defs/AbstractWorkRef"}
         },
+        "members_contained_byProp": {
+            "title": "la:members_contained_by",
+            "description": "A physical object that this object is contained by (like a box or folder) or supported by (like a shelf)",
+            "type": "array",
+            "items": {"$ref": "#/$defs/HumanMadeObjectRef"}
+        },
 
+        "duringProp": {
+            "title": "crm:P10_falls_within",
+            "description": "A reference to a Period that the current temporal entity occurs during",
+            "type": "array",
+            "items": {"$ref": "#/$defs/PeriodRef"}
+        },
+        "beforeProp": {
+            "title": "crm:P183_ends_before_the_start_of",
+            "description": "A Period, Event or Activity that the current Period, Event or Activity is before. (e.g. the referenced temporal entity is after the current one)",
+            "type": "array",
+            "items": {"$ref": "#/$defs/PeriodRefOrEventRefOrActivityRef"}
+        },
+        "afterProp": {
+            "title": "crm:P183i_starts_after_the_end_of",
+            "description": "A Period, Event or Activity that the current Period, Event or Activity is after. (e.g. the referenced temporal entity is before the current one)",
+            "type": "array",
+            "items": {"$ref": "#/$defs/PeriodRefOrEventRefOrActivityRef"}
+        },
 
         "Name": {
             "title": "crm:E33_E41_Linguistic_Appellation",
@@ -778,6 +802,9 @@
                 "used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
                 "influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
                 "technique": {"$ref": "core.json#/$defs/techniqueProp"},
+                "during": {"$ref": "core.json#/$defs/duringProp"},
+                "after": {"$ref": "core.json#/$defs/afterProp"},
+                "before": {"$ref": "core.json#/$defs/beforeProp"},
                 "part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this creation is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"}
             }
         },
@@ -869,6 +896,9 @@
                 "technique": {
                     "$ref": "#/$defs/techniqueProp"
                 },
+                "during": {"$ref": "core.json#/$defs/duringProp"},
+                "after": {"$ref": "core.json#/$defs/afterProp"},
+                "before": {"$ref": "core.json#/$defs/beforeProp"},
                 "part_of": {
                     "$ref": "#/$defs/EventRefOrActivityRef"
                 }
@@ -929,6 +959,9 @@
                 "technique": {
                     "$ref": "#/$defs/techniqueProp"
                 },
+                "during": {"$ref": "core.json#/$defs/duringProp"},
+                "after": {"$ref": "core.json#/$defs/afterProp"},
+                "before": {"$ref": "core.json#/$defs/beforeProp"},
                 "part_of": {
                     "$ref": "#/$defs/EventRefOrActivityRef"
                 },
@@ -984,6 +1017,9 @@
                 "carried_out_by": {
                     "$ref": "#/$defs/carried_out_byProp"
                 },
+                "during": {"$ref": "core.json#/$defs/duringProp"},
+                "after": {"$ref": "core.json#/$defs/afterProp"},
+                "before": {"$ref": "core.json#/$defs/beforeProp"},
                 "assigned": {
                     "title": "*",
                     "description": "Attribute Assignments can assign any entity or structure",
@@ -1292,6 +1328,19 @@
                 },
                 {
                     "$ref": "#/$defs/GroupRef"
+                }
+            ]
+        },
+        "PeriodRefOrEventRefOrActivityRef": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/PeriodRef"
+                },
+                {
+                    "$ref": "#/$defs/EventRef"
+                },
+                {
+                    "$ref": "#/$defs/ActivityRef"
                 }
             ]
         },
@@ -1611,6 +1660,36 @@
                         {
                             "type": "string",
                             "const": "InformationObject"
+                        }
+                    ]
+                },
+                "_label": {
+                    "$ref": "#/$defs/labelProp"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "additionalProperties": false
+        },
+        "PeriodRef": {
+            "title": "crm:E4_Period",
+            "description": "Reference to a `Period`\nSee: [Schema](event.html)",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "#/$defs/idProp"
+                },
+                "type": {
+                    "allOf": [
+                        {
+                            "title": "General",
+                            "$ref": "#/$defs/typeProp"
+                        },
+                        {
+                            "type": "string",
+                            "const": "Period"
                         }
                     ]
                 },

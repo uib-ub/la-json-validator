@@ -21,8 +21,13 @@
 		"attributed_by": {"$ref": "core.json#/$defs/attributed_byRelProp"},
 		"dimension": {"$ref": "core.json#/$defs/dimensionProp"},
 		"about": {"$ref": "core.json#/$defs/aboutProp"},
-
-		"members_exemplified_by": {"description": "Great big bucket for arbitrary data here :(", "type":"array"},
+		"members_contained_by": {"$ref": "core.json#/$defs/members_contained_byProp"},
+		"members_exemplified_by": {
+			"title": "la:members_exemplified_by",
+			"description": "Note Well: Nothing below this is validated! Exemplar templates for members of the set",
+			"type":"array",
+			"items": {"type": "object"}
+		},
 		"used_for": {
 			"title": "crm:P16i_was_used_for", 
 			"description": "", 

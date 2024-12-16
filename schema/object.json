@@ -90,6 +90,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this activity is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"},
 				"part": {"title":"crm:P46_is_composed_of", "description": "", "type": "array", "items": {"$ref": "#/$defs/Production"}}
 			}
@@ -113,6 +116,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this activity is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"},
 				"part": {"title":"crm:P46_is_composed_of", "description": "", "type": "array", "items": {"$ref": "#/$defs/Production"}}
 			}
@@ -131,6 +137,9 @@
 				"took_place_at": {"$ref": "core.json#/$defs/took_place_atProp"},
 				"timespan": {"$ref": "core.json#/$defs/timespanProp"},
 				"caused_by": {"$ref": "core.json#/$defs/caused_byProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this event is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"}
 			}
 		},
@@ -152,6 +161,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this activity is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"},
 				"diminished": {"title": "crm:P112_diminished", "description": "A reference to the object which the object was removed from", "$ref": "core.json#/$defs/HumanMadeObjectRef"}
 			}
@@ -177,6 +189,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this activity is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"},
 				"part": {"title":"crm:P46_is_composed_of", "description": "", "type": "array", "items": {"$ref": "#/$defs/Production"}}
 			}
@@ -199,6 +214,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this activity is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"}
 			}
 		}				

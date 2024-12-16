@@ -23,6 +23,10 @@
 		"took_place_at": {"$ref": "core.json#/$defs/took_place_atProp"},
 		"timespan": {"$ref": "core.json#/$defs/timespanProp"},
 
+		"during": {"$ref": "core.json#/$defs/duringProp"},
+		"after": {"$ref": "core.json#/$defs/afterProp"},
+		"before": {"$ref": "core.json#/$defs/beforeProp"},
+
 		"caused_by": {"$ref": "core.json#/$defs/caused_byProp"},
 		"carried_out_by": {"$ref": "core.json#/$defs/carried_out_byProp"},
 		"participant": {"$ref": "core.json#/$defs/participantProp"},

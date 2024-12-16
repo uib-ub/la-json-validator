@@ -57,6 +57,9 @@
 				"used_specific_object": {"$ref": "core.json#/$defs/used_specific_objectProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
 				"technique": {"$ref": "core.json#/$defs/techniqueProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this formation is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"}
 			}
@@ -76,6 +79,9 @@
 				"timespan": {"$ref": "core.json#/$defs/timespanProp"},
 				"caused_by": {"$ref": "core.json#/$defs/caused_byProp"},
 				"influenced_by": {"$ref": "core.json#/$defs/influenced_byProp"},
+				"during": {"$ref": "core.json#/$defs/duringProp"},
+				"after": {"$ref": "core.json#/$defs/afterProp"},
+				"before": {"$ref": "core.json#/$defs/beforeProp"},
 				"part_of": {"title": "crm:P9i_forms_part_of", "description": "An identified event or activity which this dissolution is part of", "$ref": "core.json#/$defs/EventRefOrActivityRef"}
 			}
 		}
