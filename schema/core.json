@@ -58,7 +58,7 @@
             "description": "An embedded statement about this entity, or a reference to a text that refers to the entity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/LingObjOrDigitalObjOrStatement"
+                "$ref": "#/$defs/Statement"
             }
         },
         "aboutProp": {
@@ -426,6 +426,9 @@
                 "identified_by": {
                     "$ref": "#/$defs/identified_byProp"
                 },
+                "referred_to_by": {
+                    "$ref": "#/$defs/referred_to_byProp"
+                },
                 "classified_as": {
                     "$ref": "#/$defs/classified_asProp"
                 },
@@ -499,6 +502,9 @@
                 },
                 "identified_by": {
                     "$ref": "#/$defs/identified_byProp"
+                },
+                "referred_to_by": {
+                    "$ref": "#/$defs/referred_to_byProp"
                 },
                 "classified_as": {
                     "$ref": "#/$defs/classified_asProp"
@@ -837,7 +843,8 @@
                 },
                 "classified_as": {
                     "$ref": "#/$defs/classified_asProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1228,7 +1235,7 @@
                 "referred_to_by": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/LingObjOrStatement"
+                        "$ref": "#/$defs/Statement"
                     }
                 },
                 "dimension": {
@@ -1281,17 +1288,6 @@
                 },
                 {
                     "$ref": "#/$defs/Identifier"
-                }
-            ]
-        },
-        "LingObjOrStatement": {
-            "description": "A Linguistic Object Reference or Statement",
-            "anyOf": [
-                {
-                    "$ref": "#/$defs/Statement"
-                },
-                {
-                    "$ref": "#/$defs/LinguisticObjectRef"
                 }
             ]
         },
@@ -1414,14 +1410,19 @@
                                 "Type",
                                 "Event",
                                 "Activity",
-                                "Period"
+                                "Period",
+                                "Language",
+                                "Material",
+                                "Currency",
+                                "MeasurementUnit"
                             ]
                         }
                     ]
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1452,7 +1453,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1483,7 +1485,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1513,7 +1516,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1544,7 +1548,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1575,7 +1580,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1605,7 +1611,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1635,7 +1642,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1665,7 +1673,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1695,7 +1704,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1725,7 +1735,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1755,7 +1766,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1785,7 +1797,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1815,7 +1828,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1845,7 +1859,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1875,7 +1890,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1905,7 +1921,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1935,7 +1952,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1965,7 +1983,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
@@ -1995,7 +2014,8 @@
                 },
                 "_label": {
                     "$ref": "#/$defs/labelProp"
-                }
+                },
+                "equivalent": {"$ref": "#/$defs/equivalentProp"}
             },
             "required": [
                 "id",
