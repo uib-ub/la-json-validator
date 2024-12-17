@@ -439,7 +439,7 @@
                     "$ref": "#/$defs/languageProp"
                 },
                 "referred_to_by": {
-                    "$ref": "/definitions/referred_to_byProp"
+                    "$ref": "#/$defs/referred_to_byProp"
                 },
                 "part": {
                     "description": "A list of one or more `Name` structures, which are parts of this `Name`",
