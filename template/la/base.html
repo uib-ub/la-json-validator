@@ -18,9 +18,6 @@
     <title>{%- if title -%}{{ title }}{%- else -%}Schema Docs{%- endif -%}</title>
 </head>
 <body onload="anchorOnLoad();" id="root">
-    {%- if title -%}
-        <h1>{{ title }}</h1>
-    {%- endif -%}
     {%- if config.expand_buttons -%}
         <div class="text-right">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
@@ -29,8 +26,11 @@
     {%- endif -%}
 
     {{ content(schema) }}
+
+    {% if config.with_footer -%}
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a>{%- if config.footer_show_time %} on {{ get_local_time() }}{%- endif -%}</p>
+    </footer>
+    {%- endif -%}
 </body>
-<footer>
-    <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on {{ get_local_time() }}</p>
-</footer>
 </html>

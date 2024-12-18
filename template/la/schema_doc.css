@@ -7,6 +7,7 @@ body {
 
 .btn.btn-link {
     font-size: 18px;
+    user-select: text;
 }
 
 .jsfh-animated-property {
@@ -31,15 +32,11 @@ body {
 }
 
 .btn.example-show.collapsed:before {
-    content: "Show example";
-}
-
-.btn.example-show.collapsed {
-    margin-bottom: 10px;    
+    content: "show"
 }
 
 .btn.example-show:before {
-    content: "Hide"
+    content: "hide"
 }
 
 .description.collapse:not(.show) {
@@ -96,8 +93,7 @@ body {
 }
 
 .examples {
-	padding: 0.5rem !important;
-    margin-bottom: 1rem;
+	padding: 1rem !important;
 }
 
 .examples pre {
