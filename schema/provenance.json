@@ -468,7 +468,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/LegalRight"
+						"$ref": "core.json#/$defs/Right"
 					}
 				},
 				"invalidates": {
@@ -476,7 +476,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/LegalRight"
+						"$ref": "core.json#/$defs/Right"
 					}
 				}
 			},
