@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,71 +25,71 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of equivalent `DigitalObject` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/DigitalObjectRef"
+						"$ref": "core.json#/definitions/DigitalObjectRef"
 					}
 				}
 			]
 		},
 		"representation": {
-			"$ref": "core.json#/$defs/representationProp"
+			"$ref": "core.json#/definitions/representationProp"
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"dimension": {
-			"$ref": "core.json#/$defs/dimensionProp"
+			"$ref": "core.json#/definitions/dimensionProp"
 		},
 		"part_of": {
 			"title": "crm:P106i_forms_part_of",
 			"description": "Reference to another Digital Object of which this is part",
-			"$ref": "core.json#/$defs/DigitalObjectRef"
+			"$ref": "core.json#/definitions/DigitalObjectRef"
 		},
 		"format": {
-			"$ref": "core.json#/$defs/formatProp"
+			"$ref": "core.json#/definitions/formatProp"
 		},
 		"conforms_to": {
-			"$ref": "core.json#/$defs/conforms_toProp"
+			"$ref": "core.json#/definitions/conforms_toProp"
 		},
 		"access_point": {
-			"$ref": "core.json#/$defs/access_pointProp"
+			"$ref": "core.json#/definitions/access_pointProp"
 		},
 		"digitally_available_via": {
-			"$ref": "core.json#/$defs/digitally_available_viaProp"
+			"$ref": "core.json#/definitions/digitally_available_viaProp"
 		},
 		"digitally_carries": {
 			"title": "la:digitally_carries",
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/LinguisticObjectRef"
+				"$ref": "core.json#/definitions/LinguisticObjectRef"
 			}
 		},
 		"digitally_shows": {
@@ -97,7 +97,7 @@
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/VisualItemRef"
+				"$ref": "core.json#/definitions/VisualItemRef"
 			}
 		},
 		"used_for": {
@@ -105,12 +105,12 @@
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Activity"
+				"$ref": "core.json#/definitions/Activity"
 			}
 		},
 		"created_by": {
 			"title": "crm:P94i_was_created_by",
-			"$ref": "core.json#/$defs/Creation"
+			"$ref": "core.json#/definitions/Creation"
 		}
 	},
 	"required": [

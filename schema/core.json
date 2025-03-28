@@ -4,7 +4,7 @@
     "title": "Core Schema Definitions",
     "description": "Core definitions that are used to compose the Linked Art JSON-LD API",
     "type": "object",
-    "$defs": {
+    "definitions": {
         "idProp": {
             "title": "the subject uri",
             "description": "The URI of the entity",
@@ -37,7 +37,7 @@
             "description": "A `Name` or `Identifier` that identifies the entity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/NameOrIdentifier"
+                "$ref": "#/definitions/NameOrIdentifier"
             }
         },
         "classified_asProp": {
@@ -45,7 +45,7 @@
             "description": "A `Type` which classifies this entity beyond the class given in the `type` property",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Concept"
+                "$ref": "#/definitions/Concept"
             }
         },
         "contentProp": {
@@ -58,7 +58,7 @@
             "description": "An embedded statement about this entity, or a reference to a text that refers to the entity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Statement"
+                "$ref": "#/definitions/Statement"
             }
         },
         "aboutProp": {
@@ -66,7 +66,7 @@
             "description": "The main topic(s) of the content",
             "type": "array",
             "items": {
-                "$ref": "core.json#/$defs/AnyRef"
+                "$ref": "core.json#/definitions/AnyRef"
             }
         },
         "languageProp": {
@@ -74,7 +74,7 @@
             "description": "A reference to one or more `Language` entities in which the `content` of this text is written",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/LanguageRef"
+                "$ref": "#/definitions/LanguageRef"
             }
         },
         "equivalentProp": {
@@ -82,7 +82,7 @@
             "description": "A reference to one or more other identities for this entity, such as in external vocabularies or systems",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/AnyRef"
+                "$ref": "#/definitions/AnyRef"
             }
         },
         "representationProp": {
@@ -90,7 +90,7 @@
             "description": "An embedded link through a VisualItem to a Digital Object",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/VisualItemEmbed"
+                "$ref": "#/definitions/VisualItemEmbed"
             }
         },
         "member_ofSetProp": {
@@ -98,7 +98,7 @@
             "description": "A reference to one or more `Set` entities of which this entity is a member",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/SetRef"
+                "$ref": "#/definitions/SetRef"
             }
         },
         "member_ofGroupProp": {
@@ -106,7 +106,7 @@
             "description": "A reference to one or more `Group` entities of which this entity is a member",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/GroupRef"
+                "$ref": "#/definitions/GroupRef"
             }
         },
         "valueProp": {
@@ -140,20 +140,20 @@
             "description": "A `Place` at which this event occured",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PlaceRef"
+                "$ref": "#/definitions/PlaceRef"
             }
         },
         "timespanProp": {
             "title": "crm:P4_has_time-span",
             "description": "A `TimeSpan` which describes the date-time range during which this event occured",
-            "$ref": "#/$defs/TimeSpan"
+            "$ref": "#/definitions/TimeSpan"
         },
         "caused_byProp": {
             "title": "sci:O13i_is_triggered_by",
             "description": "Another event which caused this event to occur",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/EventRefOrActivityRef"
+                "$ref": "#/definitions/EventRefOrActivityRef"
             }
         },
         "carried_out_byProp": {
@@ -161,7 +161,7 @@
             "description": "A reference to a Person or Group which carried out this activity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PersonRefOrGroupRef"
+                "$ref": "#/definitions/PersonRefOrGroupRef"
             }
         },
         "participantProp": {
@@ -169,7 +169,7 @@
             "description": "A reference to a Person or Group which participated in this activity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PersonRefOrGroupRef"
+                "$ref": "#/definitions/PersonRefOrGroupRef"
             }
         },
         "techniqueProp": {
@@ -177,7 +177,7 @@
             "description": "A general technique that was employed to carry out this activity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Concept"
+                "$ref": "#/definitions/Concept"
             }
         },
         "used_specific_objectProp": {
@@ -185,7 +185,7 @@
             "description": "An object or set of things which was used to carry out this activity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/HumanMadeObjectRefOrSetRef"
+                "$ref": "#/definitions/HumanMadeObjectRefOrSetRef"
             }
         },
         "influenced_byProp": {
@@ -193,7 +193,7 @@
             "description": "An entity that influenced the activity in some way",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/AnyRef"
+                "$ref": "#/definitions/AnyRef"
             }
         },
         "carried_outProp": {
@@ -201,7 +201,7 @@
             "description": "One or more activities which this entity carried out or performed",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Activity"
+                "$ref": "#/definitions/Activity"
             }
         },
         "participated_inProp": {
@@ -209,7 +209,7 @@
             "description": "One or more activities which this entity participated in, but did not carry out directly",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Activity"
+                "$ref": "#/definitions/Activity"
             }
         },
         "contact_pointProp": {
@@ -217,7 +217,7 @@
             "description": "An identifier which can be used as a contact point or address for the entity, such as an email address",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Identifier"
+                "$ref": "#/definitions/Identifier"
             }
         },
         "residenceProp": {
@@ -225,7 +225,7 @@
             "description": "A `Place` where this entity has resided or done business",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PlaceRef"
+                "$ref": "#/definitions/PlaceRef"
             }
         },
         "dimensionProp": {
@@ -233,7 +233,7 @@
             "description": "One or more `Dimension` structures that describe this entity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Dimension"
+                "$ref": "#/definitions/Dimension"
             }
         },
         "made_ofProp": {
@@ -241,7 +241,7 @@
             "description": "One or more `Material` types of which this object is made",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/MaterialRef"
+                "$ref": "#/definitions/MaterialRef"
             }
         },
         "current_ownerProp": {
@@ -249,7 +249,7 @@
             "description": "The current owner (a `Person` or `Group`) of this object",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PersonRefOrGroupRef"
+                "$ref": "#/definitions/PersonRefOrGroupRef"
             }
         },
         "current_custodianProp": {
@@ -257,7 +257,7 @@
             "description": "The current custodian (a `Person` or `Group`) of this object, if different from its owner",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PersonRefOrGroupRef"
+                "$ref": "#/definitions/PersonRefOrGroupRef"
             }
         },
         "current_permanent_custodianProp": {
@@ -265,30 +265,30 @@
             "description": "The current normal custodian (a `Person` or `Group`) if different from the current custodian, for example an object that is owned by an individual, currently in an exhibition, and normally under the custody of an organization",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PersonRefOrGroupRef"
+                "$ref": "#/definitions/PersonRefOrGroupRef"
             }
         },
         "current_locationProp": {
             "title": "crm:P55_has_current_location",
             "description": "The current location (a `Place`) of this object",
-            "$ref": "#/$defs/PlaceRef"
+            "$ref": "#/definitions/PlaceRef"
         },
         "current_permanent_locationProp": {
             "title": "crm:P54_has_current_permanent_location",
             "description": "The current normal location (a `Place`) of this object, if different from the current location",
-            "$ref": "#/$defs/PlaceRef"
+            "$ref": "#/definitions/PlaceRef"
         },
         "held_or_supported_byProp": {
             "title": "crm:P198i_is_held_or_supported_by",
             "description": "The physical object which holds/contains or supports this object",
-            "$ref": "#/$defs/HumanMadeObjectRef"
+            "$ref": "#/definitions/HumanMadeObjectRef"
         },
         "used_forProp": {
             "title": "crm:P16i_was_used_for",
             "description": "Activities that this entity was used for.",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Activity"
+                "$ref": "#/definitions/Activity"
             }
         },
         "showsProp": {
@@ -296,7 +296,7 @@
             "description": "A reference to a `VisualItem` that this object shows the image content of",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/VisualItemRef"
+                "$ref": "#/definitions/VisualItemRef"
             }
         },
         "carriesProp": {
@@ -304,7 +304,7 @@
             "description": "A reference to a `LinguisticObject` that this object carries the textual content of",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/LinguisticObjectRef"
+                "$ref": "#/definitions/LinguisticObjectRef"
             }
         },
         "subject_ofProp": {
@@ -312,7 +312,7 @@
             "description": "One or more human-readable web pages or other digital objects where the focus of the content is this entity",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/LinguisticObjectEmbed"
+                "$ref": "#/definitions/LinguisticObjectEmbed"
             }
         },
         "subject_toProp": {
@@ -320,7 +320,7 @@
             "description": "One or more Rights that this object is subject to",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Right"
+                "$ref": "#/definitions/Right"
             }
         },
         "attributed_byProp": {
@@ -328,7 +328,7 @@
             "description": "One or more AttributeAssignments that relate some other entity to this one",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/AttributeAssignment"
+                "$ref": "#/definitions/AttributeAssignment"
             }
         },
         "attributed_byRelProp": {
@@ -336,7 +336,7 @@
             "description": "One or more AttributeAssignments that relate some other entity to this one",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/AttributeAssignment"
+                "$ref": "#/definitions/AttributeAssignment"
             }
         },
         "formatProp": {
@@ -353,7 +353,7 @@
             "description": "A standard or specification that this entity conforms to or embodies",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/InfoObjectRef"
+                "$ref": "#/definitions/InfoObjectRef"
             }
         },
         "access_pointProp": {
@@ -361,7 +361,7 @@
             "description": "A URL from which the digital object is able to be retrieved",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/DigitalObjectRef"
+                "$ref": "#/definitions/DigitalObjectRef"
             }
         },
         "digitally_shown_byProp": {
@@ -369,7 +369,7 @@
             "description": "A digital object that shows the current visual item",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/DigitalObjectEmbed"
+                "$ref": "#/definitions/DigitalObjectEmbed"
             }
         },
         "digitally_carried_byProp": {
@@ -377,7 +377,7 @@
             "description": "A digital object that carries the current linguistic object",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/DigitalObjectEmbed"
+                "$ref": "#/definitions/DigitalObjectEmbed"
             }
         },
         "digitally_available_viaProp": {
@@ -385,7 +385,7 @@
             "description": "A digital service that may be interacted with in order to retrieve or act upon the digital object",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/DigitalService"
+                "$ref": "#/definitions/DigitalService"
             }
         },
         "conceptually_part_ofProp": {
@@ -393,7 +393,7 @@
             "description": "An Abstract Work that the current work is conceptually part of",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/AbstractWorkRef"
+                "$ref": "#/definitions/AbstractWorkRef"
             }
         },
         "members_contained_byProp": {
@@ -401,7 +401,7 @@
             "description": "A physical object that this object is contained by (like a box or folder) or supported by (like a shelf)",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/HumanMadeObjectRef"
+                "$ref": "#/definitions/HumanMadeObjectRef"
             }
         },
         "duringProp": {
@@ -409,7 +409,7 @@
             "description": "A reference to a Period that the current temporal entity occurs during",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PeriodRef"
+                "$ref": "#/definitions/PeriodRef"
             }
         },
         "beforeProp": {
@@ -417,7 +417,7 @@
             "description": "A Period, Event or Activity that the current Period, Event or Activity is before. (e.g. the referenced temporal entity is after the current one)",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PeriodRefOrEventRefOrActivityRef"
+                "$ref": "#/definitions/PeriodRefOrEventRefOrActivityRef"
             }
         },
         "afterProp": {
@@ -425,7 +425,7 @@
             "description": "A Period, Event or Activity that the current Period, Event or Activity is after. (e.g. the referenced temporal entity is before the current one)",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/PeriodRefOrEventRefOrActivityRef"
+                "$ref": "#/definitions/PeriodRefOrEventRefOrActivityRef"
             }
         },
         "Name": {
@@ -434,13 +434,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -450,28 +450,28 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "content": {
-                    "$ref": "#/$defs/contentProp"
+                    "$ref": "#/definitions/contentProp"
                 },
                 "language": {
-                    "$ref": "#/$defs/languageProp"
+                    "$ref": "#/definitions/languageProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "part": {
                     "description": "A list of one or more `Name` structures, which are parts of this `Name`",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/Name"
+                        "$ref": "#/definitions/Name"
                     }
                 }
             },
@@ -511,13 +511,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -527,29 +527,29 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "content": {
-                    "$ref": "#/$defs/contentProp"
+                    "$ref": "#/definitions/contentProp"
                 },
                 "part": {
                     "description": "A list of one or more `Identifier` structures, which are parts of this `Identifier`",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/Identifier"
+                        "$ref": "#/definitions/Identifier"
                     }
                 },
                 "assigned_by": {
                     "description": "The activity through which this `Identifier` was assigned to the entity",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/AttributeAssignment"
+                        "$ref": "#/definitions/AttributeAssignment"
                     }
                 }
             },
@@ -565,13 +565,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -581,22 +581,22 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "content": {
-                    "$ref": "#/$defs/contentProp"
+                    "$ref": "#/definitions/contentProp"
                 },
                 "language": {
-                    "$ref": "#/$defs/languageProp"
+                    "$ref": "#/definitions/languageProp"
                 },
                 "format": {
-                    "$ref": "#/$defs/formatProp"
+                    "$ref": "#/definitions/formatProp"
                 }
             },
             "required": [
@@ -611,13 +611,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -627,10 +627,10 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "begin_of_the_begin": {
                     "title": "crm:P82a_begin_of_the_begin",
@@ -659,7 +659,7 @@
                 "duration": {
                     "title": "crm:P191_had_duration",
                     "description": "A `Dimension` that describes the duration of the timespan within any given date-times",
-                    "$ref": "#/$defs/Dimension"
+                    "$ref": "#/definitions/Dimension"
                 }
             },
             "required": [
@@ -673,13 +673,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -689,31 +689,31 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "value": {
-                    "$ref": "#/$defs/valueProp"
+                    "$ref": "#/definitions/valueProp"
                 },
                 "lower_value_limit": {
-                    "$ref": "#/$defs/lower_value_limitProp"
+                    "$ref": "#/definitions/lower_value_limitProp"
                 },
                 "upper_value_limit": {
-                    "$ref": "#/$defs/upper_value_limitProp"
+                    "$ref": "#/definitions/upper_value_limitProp"
                 },
                 "unit": {
                     "title": "crm:P91_has_unit",
                     "description": "Reference to the MeasurementUnit for this dimension",
-                    "$ref": "#/$defs/UnitRef"
+                    "$ref": "#/definitions/UnitRef"
                 },
                 "assigned_by": {
                     "title": "crm:P141i_was_assigned_by",
                     "description": "The Measurement(s) that led to the assigning of this dimension",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/AttributeAssignment"
+                        "$ref": "#/definitions/AttributeAssignment"
                     }
                 }
             },
@@ -730,13 +730,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -746,22 +746,22 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "value": {
-                    "$ref": "#/$defs/valueProp"
+                    "$ref": "#/definitions/valueProp"
                 },
                 "lower_value_limit": {
-                    "$ref": "#/$defs/lower_value_limitProp"
+                    "$ref": "#/definitions/lower_value_limitProp"
                 },
                 "upper_value_limit": {
-                    "$ref": "#/$defs/upper_value_limitProp"
+                    "$ref": "#/definitions/upper_value_limitProp"
                 },
                 "currency": {
-                    "$ref": "#/$defs/CurrencyRef"
+                    "$ref": "#/definitions/CurrencyRef"
                 }
             },
             "required": [
@@ -777,13 +777,13 @@
             "type": "object",
             "properties": {
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -793,22 +793,22 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "created_by": {
                     "title": "crm:P94i_was_created_by",
-                    "$ref": "#/$defs/Creation"
+                    "$ref": "#/definitions/Creation"
                 },
                 "possessed_by": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/PersonRefOrGroupRef"
+                        "$ref": "#/definitions/PersonRefOrGroupRef"
                     }
                 }
             },
@@ -826,7 +826,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "core.json#/$defs/typeProp"
+                            "$ref": "core.json#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -836,51 +836,51 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "core.json#/$defs/labelProp"
+                    "$ref": "core.json#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "core.json#/$defs/identified_byProp"
+                    "$ref": "core.json#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "core.json#/$defs/classified_asProp"
+                    "$ref": "core.json#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "core.json#/$defs/referred_to_byProp"
+                    "$ref": "core.json#/definitions/referred_to_byProp"
                 },
                 "took_place_at": {
-                    "$ref": "core.json#/$defs/took_place_atProp"
+                    "$ref": "core.json#/definitions/took_place_atProp"
                 },
                 "timespan": {
-                    "$ref": "core.json#/$defs/timespanProp"
+                    "$ref": "core.json#/definitions/timespanProp"
                 },
                 "caused_by": {
-                    "$ref": "core.json#/$defs/caused_byProp"
+                    "$ref": "core.json#/definitions/caused_byProp"
                 },
                 "carried_out_by": {
-                    "$ref": "core.json#/$defs/carried_out_byProp"
+                    "$ref": "core.json#/definitions/carried_out_byProp"
                 },
                 "used_specific_object": {
-                    "$ref": "core.json#/$defs/used_specific_objectProp"
+                    "$ref": "core.json#/definitions/used_specific_objectProp"
                 },
                 "influenced_by": {
-                    "$ref": "core.json#/$defs/influenced_byProp"
+                    "$ref": "core.json#/definitions/influenced_byProp"
                 },
                 "technique": {
-                    "$ref": "core.json#/$defs/techniqueProp"
+                    "$ref": "core.json#/definitions/techniqueProp"
                 },
                 "during": {
-                    "$ref": "core.json#/$defs/duringProp"
+                    "$ref": "core.json#/definitions/duringProp"
                 },
                 "after": {
-                    "$ref": "core.json#/$defs/afterProp"
+                    "$ref": "core.json#/definitions/afterProp"
                 },
                 "before": {
-                    "$ref": "core.json#/$defs/beforeProp"
+                    "$ref": "core.json#/definitions/beforeProp"
                 },
                 "part_of": {
                     "title": "crm:P9i_forms_part_of",
                     "description": "An identified event or activity which this creation is part of",
-                    "$ref": "core.json#/$defs/EventRefOrActivityRef"
+                    "$ref": "core.json#/definitions/EventRefOrActivityRef"
                 }
             }
         },
@@ -890,16 +890,16 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -909,13 +909,13 @@
                     ]
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -933,7 +933,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -943,49 +943,49 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "took_place_at": {
-                    "$ref": "#/$defs/took_place_atProp"
+                    "$ref": "#/definitions/took_place_atProp"
                 },
                 "timespan": {
-                    "$ref": "#/$defs/timespanProp"
+                    "$ref": "#/definitions/timespanProp"
                 },
                 "caused_by": {
-                    "$ref": "#/$defs/caused_byProp"
+                    "$ref": "#/definitions/caused_byProp"
                 },
                 "carried_out_by": {
-                    "$ref": "#/$defs/carried_out_byProp"
+                    "$ref": "#/definitions/carried_out_byProp"
                 },
                 "used_specific_object": {
-                    "$ref": "#/$defs/used_specific_objectProp"
+                    "$ref": "#/definitions/used_specific_objectProp"
                 },
                 "influenced_by": {
-                    "$ref": "#/$defs/influenced_byProp"
+                    "$ref": "#/definitions/influenced_byProp"
                 },
                 "technique": {
-                    "$ref": "#/$defs/techniqueProp"
+                    "$ref": "#/definitions/techniqueProp"
                 },
                 "during": {
-                    "$ref": "core.json#/$defs/duringProp"
+                    "$ref": "core.json#/definitions/duringProp"
                 },
                 "after": {
-                    "$ref": "core.json#/$defs/afterProp"
+                    "$ref": "core.json#/definitions/afterProp"
                 },
                 "before": {
-                    "$ref": "core.json#/$defs/beforeProp"
+                    "$ref": "core.json#/definitions/beforeProp"
                 },
                 "part_of": {
-                    "$ref": "#/$defs/EventRefOrActivityRef"
+                    "$ref": "#/definitions/EventRefOrActivityRef"
                 }
             },
             "required": [
@@ -1002,7 +1002,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1012,49 +1012,49 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "took_place_at": {
-                    "$ref": "#/$defs/took_place_atProp"
+                    "$ref": "#/definitions/took_place_atProp"
                 },
                 "timespan": {
-                    "$ref": "#/$defs/timespanProp"
+                    "$ref": "#/definitions/timespanProp"
                 },
                 "caused_by": {
-                    "$ref": "#/$defs/caused_byProp"
+                    "$ref": "#/definitions/caused_byProp"
                 },
                 "carried_out_by": {
-                    "$ref": "#/$defs/carried_out_byProp"
+                    "$ref": "#/definitions/carried_out_byProp"
                 },
                 "used_specific_object": {
-                    "$ref": "#/$defs/used_specific_objectProp"
+                    "$ref": "#/definitions/used_specific_objectProp"
                 },
                 "influenced_by": {
-                    "$ref": "#/$defs/influenced_byProp"
+                    "$ref": "#/definitions/influenced_byProp"
                 },
                 "technique": {
-                    "$ref": "#/$defs/techniqueProp"
+                    "$ref": "#/definitions/techniqueProp"
                 },
                 "during": {
-                    "$ref": "core.json#/$defs/duringProp"
+                    "$ref": "core.json#/definitions/duringProp"
                 },
                 "after": {
-                    "$ref": "core.json#/$defs/afterProp"
+                    "$ref": "core.json#/definitions/afterProp"
                 },
                 "before": {
-                    "$ref": "core.json#/$defs/beforeProp"
+                    "$ref": "core.json#/definitions/beforeProp"
                 },
                 "part_of": {
-                    "$ref": "#/$defs/EventRefOrActivityRef"
+                    "$ref": "#/definitions/EventRefOrActivityRef"
                 },
                 "assigned": {
                     "title": "*",
@@ -1080,7 +1080,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1090,38 +1090,38 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "timespan": {
-                    "$ref": "#/$defs/timespanProp"
+                    "$ref": "#/definitions/timespanProp"
                 },
                 "carried_out_by": {
-                    "$ref": "#/$defs/carried_out_byProp"
+                    "$ref": "#/definitions/carried_out_byProp"
                 },
                 "during": {
-                    "$ref": "core.json#/$defs/duringProp"
+                    "$ref": "core.json#/definitions/duringProp"
                 },
                 "after": {
-                    "$ref": "core.json#/$defs/afterProp"
+                    "$ref": "core.json#/definitions/afterProp"
                 },
                 "before": {
-                    "$ref": "core.json#/$defs/beforeProp"
+                    "$ref": "core.json#/definitions/beforeProp"
                 },
                 "assigned": {
                     "title": "*",
                     "description": "Attribute Assignments can assign any entity or structure",
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/AnyRef"
+                        "$ref": "#/definitions/AnyRef"
                     }
                 },
                 "assigned_property": {
@@ -1144,7 +1144,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1154,22 +1154,22 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "access_point": {
-                    "$ref": "#/$defs/access_pointProp"
+                    "$ref": "#/definitions/access_pointProp"
                 },
                 "conforms_to": {
-                    "$ref": "#/$defs/conforms_toProp"
+                    "$ref": "#/definitions/conforms_toProp"
                 }
             }
         },
@@ -1182,7 +1182,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1192,25 +1192,25 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "access_point": {
-                    "$ref": "#/$defs/access_pointProp"
+                    "$ref": "#/definitions/access_pointProp"
                 },
                 "format": {
-                    "$ref": "#/$defs/formatProp"
+                    "$ref": "#/definitions/formatProp"
                 },
                 "conforms_to": {
-                    "$ref": "#/$defs/conforms_toProp"
+                    "$ref": "#/definitions/conforms_toProp"
                 }
             }
         },
@@ -1223,7 +1223,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1233,19 +1233,19 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "digitally_shown_by": {
-                    "$ref": "#/$defs/digitally_shown_byProp"
+                    "$ref": "#/definitions/digitally_shown_byProp"
                 }
             },
             "required": [
@@ -1262,7 +1262,7 @@
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1272,22 +1272,22 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "identified_by": {
-                    "$ref": "#/$defs/identified_byProp"
+                    "$ref": "#/definitions/identified_byProp"
                 },
                 "classified_as": {
-                    "$ref": "#/$defs/classified_asProp"
+                    "$ref": "#/definitions/classified_asProp"
                 },
                 "referred_to_by": {
-                    "$ref": "#/$defs/referred_to_byProp"
+                    "$ref": "#/definitions/referred_to_byProp"
                 },
                 "language": {
-                    "$ref": "#/$defs/languageProp"
+                    "$ref": "#/definitions/languageProp"
                 },
                 "digitally_carried_by": {
-                    "$ref": "#/$defs/digitally_carried_byProp"
+                    "$ref": "#/definitions/digitally_carried_byProp"
                 }
             },
             "required": [
@@ -1309,55 +1309,55 @@
                 "identified_by": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/NameOrIdentifier"
+                        "$ref": "#/definitions/NameOrIdentifier"
                     }
                 },
                 "classified_as": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/Concept"
+                        "$ref": "#/definitions/Concept"
                     }
                 },
                 "referred_to_by": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/Statement"
+                        "$ref": "#/definitions/Statement"
                     }
                 },
                 "dimension": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/Dimension"
+                        "$ref": "#/definitions/Dimension"
                     }
                 },
                 "made_of": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/MaterialRef"
+                        "$ref": "#/definitions/MaterialRef"
                     }
                 },
                 "part": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/HumanMadeObjectPart"
+                        "$ref": "#/definitions/HumanMadeObjectPart"
                     }
                 },
                 "shows": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/VisualItemRef"
+                        "$ref": "#/definitions/VisualItemRef"
                     }
                 },
                 "carries": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/LinguisticObjectRef"
+                        "$ref": "#/definitions/LinguisticObjectRef"
                     }
                 },
                 "representation": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/$defs/VisualItemRef"
+                        "$ref": "#/definitions/VisualItemRef"
                     }
                 }
             },
@@ -1370,10 +1370,10 @@
             "description": "A Name or an Identifier",
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Name"
+                    "$ref": "#/definitions/Name"
                 },
                 {
-                    "$ref": "#/$defs/Identifier"
+                    "$ref": "#/definitions/Identifier"
                 }
             ]
         },
@@ -1381,10 +1381,10 @@
             "description": "A Linguistic Object Reference or Visual Item Reference",
             "anyOf": [
                 {
-                    "$ref": "#/$defs/VisualItemRef"
+                    "$ref": "#/definitions/VisualItemRef"
                 },
                 {
-                    "$ref": "#/$defs/LinguisticObjectRef"
+                    "$ref": "#/definitions/LinguisticObjectRef"
                 }
             ]
         },
@@ -1392,13 +1392,13 @@
             "description": "A Linguistic Object Reference, Digitial Object Reference or Statement",
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Statement"
+                    "$ref": "#/definitions/Statement"
                 },
                 {
-                    "$ref": "#/$defs/DigitalObjectRef"
+                    "$ref": "#/definitions/DigitalObjectRef"
                 },
                 {
-                    "$ref": "#/$defs/LinguisticObjectRef"
+                    "$ref": "#/definitions/LinguisticObjectRef"
                 }
             ]
         },
@@ -1406,43 +1406,43 @@
             "description": "A Reference to a Person or Group",
             "anyOf": [
                 {
-                    "$ref": "#/$defs/PersonRef"
+                    "$ref": "#/definitions/PersonRef"
                 },
                 {
-                    "$ref": "#/$defs/GroupRef"
+                    "$ref": "#/definitions/GroupRef"
                 }
             ]
         },
         "PeriodRefOrEventRefOrActivityRef": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/PeriodRef"
+                    "$ref": "#/definitions/PeriodRef"
                 },
                 {
-                    "$ref": "#/$defs/EventRef"
+                    "$ref": "#/definitions/EventRef"
                 },
                 {
-                    "$ref": "#/$defs/ActivityRef"
+                    "$ref": "#/definitions/ActivityRef"
                 }
             ]
         },
         "EventRefOrActivityRef": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/EventRef"
+                    "$ref": "#/definitions/EventRef"
                 },
                 {
-                    "$ref": "#/$defs/ActivityRef"
+                    "$ref": "#/definitions/ActivityRef"
                 }
             ]
         },
         "HumanMadeObjectRefOrSetRef": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/HumanMadeObjectRef"
+                    "$ref": "#/definitions/HumanMadeObjectRef"
                 },
                 {
-                    "$ref": "#/$defs/SetRef"
+                    "$ref": "#/definitions/SetRef"
                 }
             ]
         },
@@ -1473,13 +1473,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1507,10 +1507,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1525,13 +1525,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1541,10 +1541,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1559,13 +1559,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1575,10 +1575,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1593,12 +1593,12 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1608,10 +1608,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1626,13 +1626,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1642,10 +1642,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1660,13 +1660,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "title": "Specific",
@@ -1676,10 +1676,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1694,13 +1694,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1709,10 +1709,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1727,13 +1727,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1742,10 +1742,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1760,13 +1760,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1775,10 +1775,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1793,13 +1793,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1808,10 +1808,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1826,13 +1826,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1841,10 +1841,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1859,13 +1859,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1874,10 +1874,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1892,13 +1892,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1907,10 +1907,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1925,13 +1925,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1940,10 +1940,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1958,13 +1958,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -1973,10 +1973,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -1991,13 +1991,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -2006,10 +2006,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -2024,13 +2024,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -2039,10 +2039,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -2057,13 +2057,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -2072,10 +2072,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -2090,13 +2090,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -2105,10 +2105,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [
@@ -2123,13 +2123,13 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "#/$defs/idProp"
+                    "$ref": "#/definitions/idProp"
                 },
                 "type": {
                     "allOf": [
                         {
                             "title": "General",
-                            "$ref": "#/$defs/typeProp"
+                            "$ref": "#/definitions/typeProp"
                         },
                         {
                             "type": "string",
@@ -2144,10 +2144,10 @@
                     ]
                 },
                 "_label": {
-                    "$ref": "#/$defs/labelProp"
+                    "$ref": "#/definitions/labelProp"
                 },
                 "equivalent": {
-                    "$ref": "#/$defs/equivalentProp"
+                    "$ref": "#/definitions/equivalentProp"
                 }
             },
             "required": [

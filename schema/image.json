@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,72 +25,72 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of equivalent `VisualItem` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/VisualItemRef"
+						"$ref": "core.json#/definitions/VisualItemRef"
 					}
 				}
 			]
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"dimension": {
-			"$ref": "core.json#/$defs/dimensionProp"
+			"$ref": "core.json#/definitions/dimensionProp"
 		},
 		"subject_to": {
-			"$ref": "core.json#/$defs/subject_toProp"
+			"$ref": "core.json#/definitions/subject_toProp"
 		},
 		"part_of": {
 			"title": "crm:P106i_forms_part_of",
 			"description": "Reference to another Visual Item or Linguistic Object of which this is part",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/LingObjOrVisualItemRef"
+				"$ref": "core.json#/definitions/LingObjOrVisualItemRef"
 			}
 		},
 		"conceptually_part_of": {
-			"$ref": "core.json#/$defs/conceptually_part_ofProp"
+			"$ref": "core.json#/definitions/conceptually_part_ofProp"
 		},
 		"about": {
-			"$ref": "core.json#/$defs/aboutProp"
+			"$ref": "core.json#/definitions/aboutProp"
 		},
 		"created_by": {
 			"title": "crm:P94i_was_created_by",
-			"$ref": "core.json#/$defs/Creation"
+			"$ref": "core.json#/definitions/Creation"
 		},
 		"represents": {
 			"title": "crm:P138_represents",
 			"description": "An entity which is represented in this image content",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/AnyRef"
+				"$ref": "core.json#/definitions/AnyRef"
 			}
 		},
 		"represents_instance_of_type": {
@@ -98,7 +98,7 @@
 			"description": "A Type of an entity, which is represented in this image content",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Concept"
+				"$ref": "core.json#/definitions/Concept"
 			}
 		},
 		"used_for": {
@@ -106,7 +106,7 @@
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Activity"
+				"$ref": "core.json#/definitions/Activity"
 			}
 		}
 	},

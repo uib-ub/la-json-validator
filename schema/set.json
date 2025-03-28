@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,53 +25,53 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of equivalent `Set` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/SetRef"
+						"$ref": "core.json#/definitions/SetRef"
 					}
 				}
 			]
 		},
 		"representation": {
-			"$ref": "core.json#/$defs/representationProp"
+			"$ref": "core.json#/definitions/representationProp"
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"dimension": {
-			"$ref": "core.json#/$defs/dimensionProp"
+			"$ref": "core.json#/definitions/dimensionProp"
 		},
 		"about": {
-			"$ref": "core.json#/$defs/aboutProp"
+			"$ref": "core.json#/definitions/aboutProp"
 		},
 		"members_contained_by": {
-			"$ref": "core.json#/$defs/members_contained_byProp"
+			"$ref": "core.json#/definitions/members_contained_byProp"
 		},
 		"members_exemplified_by": {
 			"title": "la:members_exemplified_by",
@@ -86,12 +86,12 @@
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Activity"
+				"$ref": "core.json#/definitions/Activity"
 			}
 		},
 		"created_by": {
 			"title": "crm:P94i_was_created_by",
-			"$ref": "core.json#/$defs/Creation"
+			"$ref": "core.json#/definitions/Creation"
 		}
 	},
 	"required": [

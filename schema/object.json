@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,99 +25,99 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of `HumanMadeObject` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/HumanMadeObjectRef"
+						"$ref": "core.json#/definitions/HumanMadeObjectRef"
 					}
 				}
 			]
 		},
 		"representation": {
-			"$ref": "core.json#/$defs/representationProp"
+			"$ref": "core.json#/definitions/representationProp"
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"dimension": {
-			"$ref": "core.json#/$defs/dimensionProp"
+			"$ref": "core.json#/definitions/dimensionProp"
 		},
 		"made_of": {
-			"$ref": "core.json#/$defs/made_ofProp"
+			"$ref": "core.json#/definitions/made_ofProp"
 		},
 		"part_of": {
 			"title": "crm:P46i_forms_part_of",
 			"description": "Another Human-Made Object of which this Object is part",
-			"$ref": "core.json#/$defs/HumanMadeObjectRef"
+			"$ref": "core.json#/definitions/HumanMadeObjectRef"
 		},
 		"current_owner": {
-			"$ref": "core.json#/$defs/current_ownerProp"
+			"$ref": "core.json#/definitions/current_ownerProp"
 		},
 		"current_custodian": {
-			"$ref": "core.json#/$defs/current_custodianProp"
+			"$ref": "core.json#/definitions/current_custodianProp"
 		},
 		"current_permanent_custodian": {
-			"$ref": "core.json#/$defs/current_permanent_custodianProp"
+			"$ref": "core.json#/definitions/current_permanent_custodianProp"
 		},
 		"current_location": {
-			"$ref": "core.json#/$defs/current_locationProp"
+			"$ref": "core.json#/definitions/current_locationProp"
 		},
 		"current_permanent_location": {
-			"$ref": "core.json#/$defs/current_locationProp"
+			"$ref": "core.json#/definitions/current_locationProp"
 		},
 		"held_or_supported_by": {
-			"$ref": "core.json#/$defs/held_or_supported_byProp"
+			"$ref": "core.json#/definitions/held_or_supported_byProp"
 		},
 		"used_for": {
-			"$ref": "core.json#/$defs/used_forProp"
+			"$ref": "core.json#/definitions/used_forProp"
 		},
 		"shows": {
-			"$ref": "core.json#/$defs/showsProp"
+			"$ref": "core.json#/definitions/showsProp"
 		},
 		"carries": {
-			"$ref": "core.json#/$defs/carriesProp"
+			"$ref": "core.json#/definitions/carriesProp"
 		},
 		"produced_by": {
 			"title": "crm:P108i_was_produced_by",
 			"description": "The `Production` activity which created this object",
-			"$ref": "#/$defs/Production"
+			"$ref": "#/definitions/Production"
 		},
 		"destroyed_by": {
 			"title": "crm:P13i_was_destroyed_by",
 			"description": "The `Destruction` event in which this object was destroyed",
-			"$ref": "#/$defs/Destruction"
+			"$ref": "#/definitions/Destruction"
 		},
 		"removed_by": {
 			"title": "crm:P113i_was_removed_by",
 			"description": "One or more `PartRemoval` activities in which this object was removed from another object",
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/PartRemoval"
+				"$ref": "#/definitions/PartRemoval"
 			}
 		},
 		"encountered_by": {
@@ -125,7 +125,7 @@
 			"description": "One or more Encounter activities in which this object was encountered",
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/Encounter"
+				"$ref": "#/definitions/Encounter"
 			}
 		},
 		"modified_by": {
@@ -133,7 +133,7 @@
 			"description": "One or more Modification activities in which this object was modified",
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/Modification"
+				"$ref": "#/definitions/Modification"
 			}
 		},
 		"changed_ownership_through": {
@@ -141,7 +141,7 @@
 			"description": "One or more Acquisition activities in which the object changed ownership",
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/EmbeddedAcquisition"
+				"$ref": "#/definitions/EmbeddedAcquisition"
 			}
 		},
 		"used_for": {
@@ -149,11 +149,11 @@
 			"description": "One or more other activities without their own identities in which this object was used",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Activity"
+				"$ref": "core.json#/definitions/Activity"
 			}
 		}
 	},
-	"$defs": {
+	"definitions": {
 		"Production": {
 			"title": "crm:E12_Production",
 			"description": "The production/creation of the object",
@@ -163,7 +163,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -173,58 +173,58 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this activity is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				},
 				"part": {
 					"title": "crm:P46_is_composed_of",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/Production"
+						"$ref": "#/definitions/Production"
 					}
 				}
 			}
@@ -238,7 +238,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -248,58 +248,58 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this activity is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				},
 				"part": {
 					"title": "crm:P46_is_composed_of",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/Production"
+						"$ref": "#/definitions/Production"
 					}
 				}
 			}
@@ -313,7 +313,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -323,39 +323,39 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this event is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				}
 			}
 		},
@@ -368,7 +368,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -378,56 +378,56 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this activity is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				},
 				"diminished": {
 					"title": "crm:P112_diminished",
 					"description": "A reference to the object which the object was removed from",
-					"$ref": "core.json#/$defs/HumanMadeObjectRef"
+					"$ref": "core.json#/definitions/HumanMadeObjectRef"
 				}
 			}
 		},
@@ -440,7 +440,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -450,23 +450,23 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"transferred_title_from": {
 					"title": "crm:P23_transferred_title_from",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"transferred_title_to": {
@@ -474,50 +474,50 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this activity is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				},
 				"part": {
 					"title": "crm:P46_is_composed_of",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/Production"
+						"$ref": "#/definitions/Production"
 					}
 				}
 			}
@@ -531,7 +531,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -541,51 +541,51 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"part_of": {
 					"title": "crm:P9i_forms_part_of",
 					"description": "An identified event or activity which this activity is part of",
-					"$ref": "core.json#/$defs/EventRefOrActivityRef"
+					"$ref": "core.json#/definitions/EventRefOrActivityRef"
 				}
 			}
 		}

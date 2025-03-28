@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,70 +25,70 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of equivalent `LinguisticObject` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/LinguisticObjectRef"
+						"$ref": "core.json#/definitions/LinguisticObjectRef"
 					}
 				}
 			]
 		},
 		"representation": {
-			"$ref": "core.json#/$defs/representationProp"
+			"$ref": "core.json#/definitions/representationProp"
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"dimension": {
-			"$ref": "core.json#/$defs/dimensionProp"
+			"$ref": "core.json#/definitions/dimensionProp"
 		},
 		"subject_to": {
-			"$ref": "core.json#/$defs/subject_toProp"
+			"$ref": "core.json#/definitions/subject_toProp"
 		},
 		"format": {
-			"$ref": "core.json#/$defs/formatProp"
+			"$ref": "core.json#/definitions/formatProp"
 		},
 		"language": {
-			"$ref": "core.json#/$defs/languageProp"
+			"$ref": "core.json#/definitions/languageProp"
 		},
 		"about": {
-			"$ref": "core.json#/$defs/aboutProp"
+			"$ref": "core.json#/definitions/aboutProp"
 		},
 		"created_by": {
 			"title": "crm:P94i_was_created_by",
-			"$ref": "core.json#/$defs/Creation"
+			"$ref": "core.json#/definitions/Creation"
 		},
 		"used_for": {
 			"title": "crm:P16i_was_used_for",
 			"description": "",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/Activity"
+				"$ref": "core.json#/definitions/Activity"
 			}
 		},
 		"part_of": {
@@ -96,11 +96,11 @@
 			"description": "Reference to another Linguistic Object or Visual Item of which this is part",
 			"type": "array",
 			"items": {
-				"$ref": "core.json#/$defs/LingObjOrVisualItemRef"
+				"$ref": "core.json#/definitions/LingObjOrVisualItemRef"
 			}
 		},
 		"content": {
-			"$ref": "core.json#/$defs/contentProp"
+			"$ref": "core.json#/definitions/contentProp"
 		}
 	},
 	"required": [

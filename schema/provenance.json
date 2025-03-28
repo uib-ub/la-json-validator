@@ -6,16 +6,16 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "core.json#/$defs/ContextStringOrArray"
+			"$ref": "core.json#/definitions/ContextStringOrArray"
 		},
 		"id": {
-			"$ref": "core.json#/$defs/idProp"
+			"$ref": "core.json#/definitions/idProp"
 		},
 		"type": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/typeProp"
+					"$ref": "core.json#/definitions/typeProp"
 				},
 				{
 					"title": "Specific",
@@ -25,112 +25,112 @@
 			]
 		},
 		"_label": {
-			"$ref": "core.json#/$defs/labelProp"
+			"$ref": "core.json#/definitions/labelProp"
 		},
 		"identified_by": {
-			"$ref": "core.json#/$defs/identified_byProp"
+			"$ref": "core.json#/definitions/identified_byProp"
 		},
 		"classified_as": {
-			"$ref": "core.json#/$defs/classified_asProp"
+			"$ref": "core.json#/definitions/classified_asProp"
 		},
 		"referred_to_by": {
-			"$ref": "core.json#/$defs/referred_to_byProp"
+			"$ref": "core.json#/definitions/referred_to_byProp"
 		},
 		"equivalent": {
 			"allOf": [
 				{
 					"title": "General",
-					"$ref": "core.json#/$defs/equivalentProp"
+					"$ref": "core.json#/definitions/equivalentProp"
 				},
 				{
 					"title": "Specific",
 					"description": "List of equivalent `Activity` entities",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/ActivityRef"
+						"$ref": "core.json#/definitions/ActivityRef"
 					}
 				}
 			]
 		},
 		"representation": {
-			"$ref": "core.json#/$defs/representationProp"
+			"$ref": "core.json#/definitions/representationProp"
 		},
 		"member_of": {
-			"$ref": "core.json#/$defs/member_ofSetProp"
+			"$ref": "core.json#/definitions/member_ofSetProp"
 		},
 		"subject_of": {
-			"$ref": "core.json#/$defs/subject_ofProp"
+			"$ref": "core.json#/definitions/subject_ofProp"
 		},
 		"attributed_by": {
-			"$ref": "core.json#/$defs/attributed_byRelProp"
+			"$ref": "core.json#/definitions/attributed_byRelProp"
 		},
 		"during": {
-			"$ref": "core.json#/$defs/duringProp"
+			"$ref": "core.json#/definitions/duringProp"
 		},
 		"after": {
-			"$ref": "core.json#/$defs/afterProp"
+			"$ref": "core.json#/definitions/afterProp"
 		},
 		"before": {
-			"$ref": "core.json#/$defs/beforeProp"
+			"$ref": "core.json#/definitions/beforeProp"
 		},
 		"took_place_at": {
-			"$ref": "core.json#/$defs/took_place_atProp"
+			"$ref": "core.json#/definitions/took_place_atProp"
 		},
 		"timespan": {
-			"$ref": "core.json#/$defs/timespanProp"
+			"$ref": "core.json#/definitions/timespanProp"
 		},
 		"caused_by": {
-			"$ref": "core.json#/$defs/caused_byProp"
+			"$ref": "core.json#/definitions/caused_byProp"
 		},
 		"carried_out_by": {
-			"$ref": "core.json#/$defs/carried_out_byProp"
+			"$ref": "core.json#/definitions/carried_out_byProp"
 		},
 		"used_specific_object": {
-			"$ref": "core.json#/$defs/used_specific_objectProp"
+			"$ref": "core.json#/definitions/used_specific_objectProp"
 		},
 		"influenced_by": {
-			"$ref": "core.json#/$defs/influenced_byProp"
+			"$ref": "core.json#/definitions/influenced_byProp"
 		},
 		"technique": {
-			"$ref": "core.json#/$defs/techniqueProp"
+			"$ref": "core.json#/definitions/techniqueProp"
 		},
 		"part_of": {
 			"title": "crm:P9i_forms_part_of",
 			"description": "An identified event or activity which this activity is part of",
-			"$ref": "core.json#/$defs/EventRefOrActivityRef"
+			"$ref": "core.json#/definitions/EventRefOrActivityRef"
 		},
 		"part": {
 			"title": "crm:P9_consists_of",
 			"description": "More specific parts of the event",
 			"type": "array",
 			"items": {
-				"$ref": "#/$defs/PartOptions"
+				"$ref": "#/definitions/PartOptions"
 			}
 		}
 	},
-	"$defs": {
+	"definitions": {
 		"PartOptions": {
 			"anyOf": [
 				{
-					"$ref": "#/$defs/Acquisition"
+					"$ref": "#/definitions/Acquisition"
 				},
 				{
-					"$ref": "#/$defs/RightAcquisition"
+					"$ref": "#/definitions/RightAcquisition"
 				},
 				{
-					"$ref": "#/$defs/TransferOfCustody"
+					"$ref": "#/definitions/TransferOfCustody"
 				},
 				{
-					"$ref": "#/$defs/Payment"
+					"$ref": "#/definitions/Payment"
 				},
 				{
-					"$ref": "#/$defs/Encounter"
+					"$ref": "#/definitions/Encounter"
 				},
 				{
-					"$ref": "#/$defs/Move"
+					"$ref": "#/definitions/Move"
 				},
 				{
-					"$ref": "#/$defs/Promise"
+					"$ref": "#/definitions/Promise"
 				}
 			]
 		},
@@ -143,7 +143,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -153,53 +153,53 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"transferred_title_from": {
 					"title": "crm:P23_transferred_title_from",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"transferred_title_to": {
@@ -207,7 +207,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"transferred_title_of": {
@@ -215,7 +215,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/HumanMadeObjectRef"
+						"$ref": "core.json#/definitions/HumanMadeObjectRef"
 					}
 				}
 			},
@@ -234,7 +234,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -244,53 +244,53 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"transferred_custody_from": {
 					"title": "crm:P28_custody_surrendered_by",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"transferred_custody_to": {
@@ -298,7 +298,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"transferred_custody_of": {
@@ -306,7 +306,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/HumanMadeObjectRef"
+						"$ref": "core.json#/definitions/HumanMadeObjectRef"
 					}
 				}
 			},
@@ -325,7 +325,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -335,53 +335,53 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"paid_from": {
 					"title": "la:paid_from",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"paid_to": {
@@ -389,13 +389,13 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/PersonRefOrGroupRef"
+						"$ref": "core.json#/definitions/PersonRefOrGroupRef"
 					}
 				},
 				"paid_amount": {
 					"title": "la:paid_amount",
 					"description": "",
-					"$ref": "core.json#/$defs/MonetaryAmount"
+					"$ref": "core.json#/definitions/MonetaryAmount"
 				}
 			},
 			"required": [
@@ -412,7 +412,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -422,53 +422,53 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"establishes": {
 					"title": "la:establishes",
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/Right"
+						"$ref": "core.json#/definitions/Right"
 					}
 				},
 				"invalidates": {
@@ -476,7 +476,7 @@
 					"description": "",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/Right"
+						"$ref": "core.json#/definitions/Right"
 					}
 				}
 			},
@@ -495,7 +495,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -505,63 +505,63 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"moved_from": {
 					"title": "crm:P27_moved_from",
 					"description": "Reference to the Place where the objects were moved from",
-					"$ref": "core.json#/$defs/PlaceRef"
+					"$ref": "core.json#/definitions/PlaceRef"
 				},
 				"moved_to": {
 					"title": "crm:P26_moved_to",
 					"description": "Reference to the Place where the objects were moved to",
-					"$ref": "core.json#/$defs/PlaceRef"
+					"$ref": "core.json#/definitions/PlaceRef"
 				},
 				"moved": {
 					"title": "crm:P25_moved",
 					"description": "The objects that were moved",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/HumanMadeObjectRef"
+						"$ref": "core.json#/definitions/HumanMadeObjectRef"
 					}
 				}
 			},
@@ -580,7 +580,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -590,53 +590,53 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				},
 				"encountered": {
 					"title": "sci:O19_has_found_object",
 					"description": "The objects that were encountered during this event",
 					"type": "array",
 					"items": {
-						"$ref": "core.json#/$defs/HumanMadeObjectRef"
+						"$ref": "core.json#/definitions/HumanMadeObjectRef"
 					}
 				}
 			},
@@ -655,7 +655,7 @@
 					"allOf": [
 						{
 							"title": "General",
-							"$ref": "core.json#/$defs/typeProp"
+							"$ref": "core.json#/definitions/typeProp"
 						},
 						{
 							"title": "Specific",
@@ -665,46 +665,46 @@
 					]
 				},
 				"_label": {
-					"$ref": "core.json#/$defs/labelProp"
+					"$ref": "core.json#/definitions/labelProp"
 				},
 				"identified_by": {
-					"$ref": "core.json#/$defs/identified_byProp"
+					"$ref": "core.json#/definitions/identified_byProp"
 				},
 				"classified_as": {
-					"$ref": "core.json#/$defs/classified_asProp"
+					"$ref": "core.json#/definitions/classified_asProp"
 				},
 				"referred_to_by": {
-					"$ref": "core.json#/$defs/referred_to_byProp"
+					"$ref": "core.json#/definitions/referred_to_byProp"
 				},
 				"took_place_at": {
-					"$ref": "core.json#/$defs/took_place_atProp"
+					"$ref": "core.json#/definitions/took_place_atProp"
 				},
 				"timespan": {
-					"$ref": "core.json#/$defs/timespanProp"
+					"$ref": "core.json#/definitions/timespanProp"
 				},
 				"caused_by": {
-					"$ref": "core.json#/$defs/caused_byProp"
+					"$ref": "core.json#/definitions/caused_byProp"
 				},
 				"carried_out_by": {
-					"$ref": "core.json#/$defs/carried_out_byProp"
+					"$ref": "core.json#/definitions/carried_out_byProp"
 				},
 				"used_specific_object": {
-					"$ref": "core.json#/$defs/used_specific_objectProp"
+					"$ref": "core.json#/definitions/used_specific_objectProp"
 				},
 				"influenced_by": {
-					"$ref": "core.json#/$defs/influenced_byProp"
+					"$ref": "core.json#/definitions/influenced_byProp"
 				},
 				"technique": {
-					"$ref": "core.json#/$defs/techniqueProp"
+					"$ref": "core.json#/definitions/techniqueProp"
 				},
 				"during": {
-					"$ref": "core.json#/$defs/duringProp"
+					"$ref": "core.json#/definitions/duringProp"
 				},
 				"after": {
-					"$ref": "core.json#/$defs/afterProp"
+					"$ref": "core.json#/definitions/afterProp"
 				},
 				"before": {
-					"$ref": "core.json#/$defs/beforeProp"
+					"$ref": "core.json#/definitions/beforeProp"
 				}
 			},
 			"required": [
