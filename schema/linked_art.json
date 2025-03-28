@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "linked-art.json",
+    "$id": "linked_art.json",
     "title": "Linked Art Schema",
     "description": "All Linked Art Records",
     "type": "object",
