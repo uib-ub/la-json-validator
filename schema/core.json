@@ -1372,12 +1372,10 @@
                 {
                     "title": "Linked Art with Extensions",
                     "type": "array",
-                    "items": [
-                        {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    ]
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
                 }
             ]
         },
